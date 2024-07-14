@@ -78,7 +78,8 @@
                 </div>
             </div>
             <div class="form-container">
-                <form action="/" method="post" name="contact" id="my-form">
+                <form name="Contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="Contact" />
                     <div class="form-group">
                         <label for="name">Your Name</label>
                         <input type="text" name="user_name" id="name" placeholder="Name">
