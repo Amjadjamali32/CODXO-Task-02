@@ -1,0 +1,341 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+
+.navbar {
+    background-color: rgb(255, 255, 254);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Ensure the navbar stays on top */
+    height: 75px; 
+    box-shadow: 3px 3px 20px black;
+
+}
+
+.parent-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.logo-name a {
+    text-decoration: none;
+    color: rgb(47, 47, 243);
+    text-shadow: 2px 2px 2px  rgb(47, 47, 243);
+}
+
+.logo-name a:hover {
+    cursor: pointer;
+}
+
+.menus-list {
+    display: flex;
+    justify-content: center;
+}
+
+.menus-container .menus-list {
+    list-style-type: none;
+    display: flex;
+    margin-top: 26px;
+    font-weight: bold;
+    color: black;
+
+}
+
+.menus-list li a {
+    text-decoration: none;
+    padding: 8px 20px;
+    cursor: pointer;
+    color: black;
+}
+
+.menus-list li a:hover {
+    border-bottom: 4px solid rgb(47, 47, 243);
+    color: rgb(47, 47, 243);
+    /* text-shadow: 2px 1px 2px rgb(215, 22, 22); */
+}
+
+#nav-btn {
+    background-color: rgb(47, 47, 243);
+    font-weight: bold;
+    margin-top: 19px;
+    padding: 8px 20px;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    border: none;
+    color: white;
+}
+
+#nav-btn a {
+    text-decoration: none;
+    color: white;
+}
+
+#nav-btn:hover {
+    box-shadow: 5px 5px 20px rgb(47, 47, 243);
+}
+
+.open-menu-btn , .close-menu-btn {
+    display: none;
+}
+
+.service-heading {
+    margin-top: 85px;
+    text-align: center;
+}
+
+.technical-heading {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.services-container {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 10px;
+    margin-bottom: 0;
+}
+
+.first-container, .second-container, .third-container {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    /* background-color: blue; */
+    background-color: #43424c;
+    color: white;
+    width: 350px;
+    border-radius: 5px;
+}
+
+.first-container:hover, .second-container:hover, .third-container:hover {
+    box-shadow: 5px 5px 20px  black;
+    background-color: rgb(47, 47, 243);
+    cursor: pointer;
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 4px;
+    margin-bottom: 10px;
+}
+
+.child {
+    display: flex;
+    align-items: center;
+}
+
+.childs span {
+    width: 150px;
+    text-align: left;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+progress {
+    width: 600px;
+    height: 13px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px;
+    color: blue;
+}
+
+/* Mobile responsive code */
+@media (max-width: 480px) {
+    .navbar {
+        height: 60px;
+        box-shadow: none;
+    }
+
+    .parent-container {
+        display: flex;
+        flex-direction: column;
+        justify-content:flex-start;
+        background-color: aqua;
+    }
+
+    .heading {
+        margin-top: 75px;
+        text-align: center;
+    }
+
+    .menus-container {
+        display: none;
+    }
+
+    .menus-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-top: 0;
+        padding: 0;
+    }
+
+    .menus-list li {
+        padding: 8px;
+        text-align: left;
+    }
+
+    .logo-container {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .logo-name {
+        font-size: 20px;
+        margin-top: 16px;
+        margin-left: 15px;
+    }
+
+    #nav-btn {
+        display: none;
+    }
+    
+    .open-menu-btn {
+        display: inline;
+        margin-top: 0;
+        margin-left: 20px;
+        border: none;
+        position: relative;
+        background-color: aqua;
+        cursor: pointer;
+    }
+
+    .close-menu-btn {
+        display: none;
+        margin-top: 0;
+        border: none;
+        position: relative;
+        background-color: aqua;
+        cursor: pointer;
+    }
+
+    .service-heading {
+        margin-top: 70px;
+    }
+
+    .services-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .first-container, .second-container, .third-container {
+        width: 80vw;
+        margin: auto;
+        text-align: center;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .first-container h2, .second-container h2 , .third-container h2 {
+        margin: 2px;
+    }
+
+    .skills {
+        width: 90vw;
+        margin: auto;
+        align-items: center;
+    }
+
+    .childs {
+        width: 40vw;
+        text-align: left;
+    }
+
+    .file {
+        width: 40vw;
+    }
+
+    .childs progress {
+        width: 50vw;
+    }
+}
+
+/* Tablet responsive code */
+@media (min-width: 481px) and (max-width: 1024px)  {
+    .navbar {
+        height: 60px;
+        box-shadow: none;
+    }
+
+    .parent-container {
+        display: flex;
+        flex-direction: column;
+        justify-content:flex-start;
+        background-color: aqua;
+    }
+
+    .heading {
+        margin-top: 75px;
+        text-align: center;
+    }
+
+    .menus-container {
+        display: none;
+    }
+
+    .menus-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-top: 0;
+        padding: 0;
+    }
+
+    .menus-list li {
+        padding: 8px;
+        text-align: left;
+    }
+
+    .logo-container {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .logo-name {
+        font-size: 20px;
+        margin-top: 16px;
+        margin-left: 15px;
+    }
+
+    #nav-btn {
+        display: none;
+    }
+    
+    .open-menu-btn {
+        display: inline;
+        margin-top: 0;
+        margin-left: 20px;
+        border: none;
+        position: relative;
+        background-color: aqua;
+        cursor: pointer;
+    }
+
+    .close-menu-btn {
+        display: none;
+        margin-top: 0;
+        border: none;
+        position: relative;
+        background-color: aqua;
+        cursor: pointer;
+    }
+
+    .service-heading {
+        margin-top: 70px;
+    }
+
+    .services-container {
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        align-content: center;
+    }
+}

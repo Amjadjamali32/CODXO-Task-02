@@ -1,0 +1,447 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+
+.navbar {
+    background-color: rgb(255, 255, 254);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Ensure the navbar stays on top */
+    height: 75px; 
+    box-shadow: 3px 3px 20px black;
+
+}
+
+.parent-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.logo-name a {
+    text-decoration: none;
+    color: rgb(47, 47, 243);
+    text-shadow: 2px 2px 2px  rgb(47, 47, 243);
+}
+
+.logo-name a:hover {
+    cursor: pointer;
+}
+
+.menus-list {
+    display: flex;
+    justify-content: center;
+}
+
+.menus-container .menus-list {
+    list-style-type: none;
+    display: flex;
+    margin-top: 26px;
+    font-weight: bold;
+    color: black;
+
+}
+
+.menus-list li a {
+    text-decoration: none;
+    padding: 8px 20px;
+    cursor: pointer;
+    color: black;
+}
+
+.menus-list li a:hover {
+    border-bottom: 4px solid rgb(47, 47, 243);
+    color: rgb(47, 47, 243);
+    /* text-shadow: 2px 1px 2px rgb(215, 22, 22); */
+}
+
+#nav-btn {
+    background-color: rgb(47, 47, 243);
+    font-weight: bold;
+    margin-top: 19px;
+    padding: 8px 20px;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    border: none;
+    color: white;
+}
+
+#nav-btn a {
+    text-decoration: none;
+    color: white;
+}
+
+#nav-btn:hover {
+    box-shadow: 5px 5px 20px rgb(47, 47, 243);
+}
+
+.open-menu-btn , .close-menu-btn {
+    display: none;
+}
+
+.main-container {
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.image-container {
+    width: 400px;
+    margin: 50px;
+}
+
+#about-image {
+    border: 8px solid rgb(47, 47, 243);;
+    box-shadow: 5px 5px 20px rgb(47, 47, 243);
+    border-radius: 5px;
+}
+
+.content-container {
+    margin-left: -90px;
+    width: 700px;
+    margin-top: 10px;
+    margin-right: 10px;
+    height: 470px;
+}
+
+.text-container {
+    margin-top: 10px;
+    padding: 8px;
+}
+
+.my-title-name {
+    font-size: 30px;
+}
+
+.inner-main-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+}
+
+.childs-container {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.first-child , .second-child, .third-child, .fourth-child {
+    width: 150px;
+    height: 100px;
+    background-color: rgb(47, 47, 243);;
+    padding: 8px;
+    margin: 5px;
+    text-align: center;
+    color: white;
+}
+
+.first-child:hover, .second-child:hover, .third-child:hover, .fourth-child:hover  {
+    transform:scale(1.1);
+    cursor: pointer;
+}
+
+.button-container > h2 {
+    margin: 4px;
+    font-size: 20px;
+}
+
+.about-text {
+    font-size: 16px;
+}
+
+.childs-text {
+    margin:4px
+}
+
+#Download-Btn {
+    width: 200px;
+    padding: 8px 12px;
+    color: rgb(47, 47, 243);;
+    border: 2px solid rgb(47, 47, 243);
+    margin: 4px;
+    font-weight: bold;
+}
+
+#Download-Btn a{
+    text-decoration: none;
+} 
+
+#Download-Btn:hover {
+    cursor: pointer;
+    opacity: 0.7;
+    box-shadow: 5px 5px 20px rgb(47, 47, 243)
+}
+
+
+/* mobile code */
+@media (max-width: 480px) {
+    .navbar {
+        height: 60px;
+        box-shadow: none;
+    }
+
+    .parent-container {
+        display: flex;
+        flex-direction: column;
+        justify-content:flex-start;
+        background-color: aqua;
+    }
+
+    .menus-container {
+        display: none;
+    }
+
+    .menus-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-top: 0;
+        padding: 0;
+    }
+
+    .menus-list li {
+        padding: 8px;
+        text-align: left;
+    }
+
+    .logo-container {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .logo-name {
+        font-size: 20px;
+        margin-top: 16px;
+        margin-left: 15px;
+    }
+
+    #nav-btn {
+        display: none;
+    }
+    
+    .open-menu-btn {
+        display: inline;
+        margin-top: 0;
+        margin-left: 20px;
+        border: none;
+        position: relative;
+        background-color: aqua;
+        cursor: pointer;
+    }
+
+    .close-menu-btn {
+        display: none;
+        margin-top: 0;
+        border: none;
+        position: relative;
+        background-color: aqua;
+        cursor: pointer;
+    }
+
+    .main-container {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+    }
+
+    .image-container {
+        margin: 20px;
+        width: 80vw;
+        max-width: 100%;
+    }
+
+    .text-container {
+        max-width: 100%;
+        width: 80vw;
+    }
+
+    .content-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        max-width: 100%;
+        width: 90vw;
+        margin: 0;
+        margin-left: 10px;
+    }
+
+    .inner-main-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        max-width: 100%;
+    }
+
+    .childs-container {
+        display: grid;
+        grid-template-columns: repeat(1 , 1fr);
+        width: 80vw;
+        max-width: 100%;
+        margin: 10px;
+        max-width: 100%;
+    }
+
+    .first-child, .second-child, .third-child, .fourth-child {
+        max-width: 100%;
+        width: 75vw;
+    }
+
+    .button-container {
+        width: 85vw;
+    }
+
+    #about-image {
+        width: 80vw;
+        max-width: 100%;
+    }
+
+    .my-title-name {
+        margin: 2px;
+    }
+
+    #Download-Btn {
+        margin: 10px;
+        align-self: center;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+    .navbar {
+        height: 60px;
+        box-shadow: none;
+    }
+
+    .parent-container {
+        display: flex;
+        flex-direction: column;
+        justify-content:space-between;
+        background-color: aqua;
+    }
+
+    .menus-container {
+        display: none;
+    }
+
+    .menus-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-top: 0;
+        padding: 0;
+    }
+
+    .menus-list li {
+        padding: 8px;
+        text-align: left;
+    }
+
+    .logo-container {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .logo-name {
+        font-size: 20px;
+        margin-top: 16px;
+    }
+
+    #nav-btn {
+        display: none;
+    }
+    
+    .open-menu-btn {
+        display: inline;
+        margin-top: 0;
+        border: none;
+        position: relative;
+        background-color: aqua;
+        cursor: pointer;
+    }
+
+    .close-menu-btn {
+        display: none;
+        margin-top: 0;
+        border: none;
+        position: relative;
+        background-color: aqua;
+        cursor: pointer;
+    }
+
+    .main-container {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+        justify-content:center;
+        margin-top: 90px;
+        margin-left: auto;
+    }
+
+    .image-container {
+        max-width: 100%;
+        margin:auto;
+        width: 40vw;
+    }
+
+    .text-container {
+        max-width: 100%;
+        width: 80vw;
+        justify-content: center;
+    }
+
+    .content-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        max-width: 100%;
+        width: 90vw;
+        margin: 0;
+        margin-left: auto;
+        justify-content: center;
+    }
+
+    .inner-main-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        max-width: 100%;
+        justify-content: center;
+    }
+
+    .childs-container {
+        display: grid;
+        grid-template-columns: repeat(1 , 1fr);
+        width: 70vw;
+        max-width: 60%;
+        margin: 10px;
+        max-width: 100%;
+        justify-content: center;
+    }
+
+    .first-child, .second-child, .third-child, .fourth-child {
+        max-width: 100%;
+        width: 60vw;
+        margin-left: auto;
+    }
+
+    .button-container {
+        width: 85vw;
+    }
+
+    #about-image {
+        width: 50vw;
+        max-width: 100%;
+    }
+
+    .my-title-name {
+        margin: 2px;
+    }
+
+    #Download-Btn {
+        margin: 10px;
+        align-self: center;
+    }
+}
